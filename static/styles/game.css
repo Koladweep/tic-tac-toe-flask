@@ -1,0 +1,133 @@
+
+	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+      :root,body {
+        /* Set the base font size for the document */
+        font-size: calc(1vw + 1vh + 0.9vmin);
+        font-family: 'Press Start 2P', cursive;
+   
+
+      }
+      #container {
+        /* Set the width and height of the container to 80% of the smaller dimension of the viewport */
+        width: 100vmin;
+        height: 80vmin;
+        /* Center the container horizontally and vertically */
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-40%, -70%);
+        /* Add padding to the container */
+        
+        
+      }
+	   #reset {
+        display: none;
+      }
+	  #reset, #tossButton {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  color: ff8c00;
+  
+  }
+  
+   
+  
+  #tossButton:hover {
+    transform: scale(1.1);
+		background-color:#daa520;
+
+  }#reset:hover {
+    transform: scale(1.1);
+	background-color:#ffd700;
+	
+
+  }
+
+#displaymessages{height: 10% fixed;}
+      table {
+        border-collapse: collapse;
+        /* Set the width and height of the table to 100% of its parent container */
+        width: 64%;
+        height: 80%;
+		  bottom :0%;
+		  right: 20%;
+		  padding: 40% 0 0 40%;
+      }
+      td {
+        border: 3px solid black;
+        width: calc(100% / 3);
+        height: calc(100% / 3);
+        text-align: center;
+        vertical-align: middle;
+		font-size:3em;
+
+	  }
+      #reset {
+        display: none;
+      }
+		#board{
+  margin-bottom: 5%;
+}
+
+  .tic-tac-toe {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+  }
+  
+  .tic-tac-toe:after, .tic-tac-toe:before {
+    content: "Tic Tac Toe";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .tic-tac-toe:after {
+    right: 0;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+
+  }
+  .tic-tac-toe:before {
+    left: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+.buttons{padding: 10px; 
+	 position :relative;
+
+background-color:F0F8FF;font-size: 1.5em;
+}
+	    .backbutton{
+position: fixed;
+top: 10%;
+left: 2%;
+background-color:F0F8FF;font-size: 2em;		    
+  }.backbutton:hover {
+    transform: scale(1.1);
+  
+	    }
+
+
+      /* Light mode styles */
+      @media (prefers-color-scheme: light) {
+        body {
+          background-color: white;
+          color: black;
+        }
+      }
+
+      /* Dark mode styles */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: black;
+          color: #fffaf0;
+        }
+        td {
+          border-color: white;
+        }
+      }

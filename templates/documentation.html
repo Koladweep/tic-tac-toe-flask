@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <title>Tic-Tac-Toe Documentation</title>
+    <meta name="description"
+        content="This document provides an overview of the Tic-Tac-Toe game, including its implementation, features, and behavior.">
+    <style>
+        /* Add your styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .documentation-header {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1em;
+            visibility: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1em;
+        }
+
+        .content {
+            line-height: 1.5;
+        }
+
+        h1 {
+            position: relative;
+            margin-top: .2em;
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        .buttons{ 
+            margin-top: 2em;
+            font-size: 2em;
+            text-align: center;
+        }/*unused for now*/
+
+        #backbutton {
+            padding: 10px;
+            position: fixed;
+            top: 10%;
+            right: 2%;
+            background-color: F0F8FF;
+            font-size: 2em;
+        }#backbutton:hover {
+    transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content"> <!-- Add your documentation content here -->
+        <h1>Tic-Tac-Toe Game Documentation</h1>
+        <ol>
+            <li> Overview
+                <ul>
+                    <li>Tic-Tac-Toe is a simple, player Vs. A.I. game, where both take turns placing their symbols(X and
+                        O) on a 3x3 grid.</li>
+                    <li>First mover is decided by a toss</li>
+                    <li>Whoever succeeds in placing three of their symbols in a <u>row</u>, <u>column</u>, or
+                        <u>diagonal</u> wins the game.</li> 
+                    </ul>
+
+            </li>
+            <li>Implementation Details 
+                <p>The game is implemented using HTML, CSS, and JavaScript.</p>
+                <ol>
+                    <li>The HTML code defines the structure of the page, including-
+                        <ul>
+                            <li>the game board,</li>
+                            <li>buttons for resetting the game and changing difficulty levels,</li>
+                            <li>and elements for displaying messages to the player.</li>
+                        </ul>
+                    </li>
+                    <li>The CSS code defines the styles for these elements, such as their <u>size</u>, <u>position</u>, and
+                        <u>color</u>.</li>
+                    <li>The JavaScript code defines the game's logic and behavior, such as how to handle player moves, check
+                        for a win or draw, and reset the game.</li>
+                        <p>source code: <a href= "https://github.com/Koladweep/Tic-Tac-Toe" target="_blank" rel="noopener noreferrer">https://github.com/Koladweep/Tic-Tac-Toe</a></p>
+                </ol>
+            </li>
+            <li>Features
+                <p>One of the key features of this game is its AI opponent, which uses different heuristics and
+                    algorithms to determine its moves depending on the selected difficulty level.</p>
+                <ol>
+                    <li>At the "easy" level, the AI chooses a random available cell.</li>
+                    <li>At the "medium" level, it tries to choose the center or a corner cell if available (This
+                        increases the probability of winning).</li>
+                    <li>At the "tough" level, it uses a simplified version of the minimax algorithm to simulate all
+                        possible moves and outcomes and choose a move that maximizes its chances of winning while
+                        minimizing its chances of losing by <b>even trying to block the Player from winning.😃</b></li>
+                    <li>The game cannot start without a toss and you cannot back out once it begins 😈🔱.</li>
+                </ol>
+            </li>
+            <li>Behavior
+                <p>The game's behavior is controlled by several variables and functions defined in the JavaScript code.
+                    When the user clicks on a cell in the game board or on one of the buttons (e.g., reset or toss), an
+                    event listener function is called that updates the game state and HTML elements accordingly.</p>
+                <p>For example, when a player clicks on an empty cell in the game board, the `playerMove` function is
+                    called. This function updates the content of the clicked cell to show the current player's symbol
+                    (always "X") and checks if the current player has won or if there is a tie. If neither of these
+                    conditions is met, it switches to the other player (the computer) and calls the `computerMove`
+                    function.</p>
+                <p><b>The `computerMove` function uses different heuristics to determine its move depending on the
+                        selected difficulty level (as described above). Once it has chosen a move, it updates the
+                        corresponding cell in the game board with its symbol (always "O") and checks if it has won or if
+                        there is a tie.</b></p>
+                <p>Overall, the game's behavior is determined by a combination of user interactions (e.g., clicking
+                    on cells or buttons) and internal logic (e.g., checking for wins or ties) implemented in
+                    JavaScript.</p>
+            </li>
+            <li>Credits
+                <p><b>First credits go to my parents and to my superiors, and preceptors. I offer them my respects. I cannot be
+                    anything without their grace.</b></p>
+                <p><b>Tailored with the help of:</b></p>
+                <ol>
+                    <li><b>ChatGPT 3.5: </b>The friendly developer copilot and the interactive developer book that will
+                        finally make you feel "It's time I read documentation. It helps when you get to see before you read.</li>
+                    <li><b>Microsoft Bing: </b>All the JavaScript and logic was developed by the Bing Chatbot that is built
+                        on ChatGPT-4.</li>
+                    <li><b>Mozilla Developers Network:</b> I found this resource directly and indirectly very helpful
+                        in learning HTML, CSS, colors (learning), and <u>project ideation</u> (I'm now learning to do this before
+                        getting into the tech). MDN got me started with web development.</li>
+                    <li><b>Github Copilot:</b> Latest. It helped me reformat the documentation from it's messy form to a
+                        more readable and found the glitch in the list nesting. I like this tool.</li>
+                        <li><b>HTML Preview v0.2.5 by George Oliveira:</b> A really helpful VSCode plugin that could've saved me so much time had I used it earlier. It's a great tool to preview your HTML files in the browser without having to save them first. Remembering the past experience with that kind of stuff while testing this game, I was unwilling to fix this documentation, had I not tried these tools.</li>
+                        </li>
+                    </ol>
+                    <a id='backbutton' href={{ url_for('index') }}>🏡→</a>
+    </div>
+</body>
+
+</html>

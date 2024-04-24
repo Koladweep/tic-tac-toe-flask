@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/game.css') }}">
+  </head>
+    <div class="tic-tac-toe">
+  Tic Tac Toe
+</div>
+  <body>
+<a class= backbutton href="{{url_for('index')}}">←🏡</a>
+    <h1 style="text-align: center; color:purple;">Tic-Tac-Toe</h1>
+	<div id="container">
+	  <label>
+        <label>
+          <input type="radio" name="difficulty" value="easy" checked ><span style="color: yellowgreen;"> Easy</span>
+        </label>
+        <label>
+          <input type="radio" name="difficulty" value="medium" ><span style="color: yellow;"> Medium</span>
+        </label>
+        <label>
+          <input type="radio" name="difficulty" value="tough" ><span style="color: orangered;">Tough</span>         </label>
+      </label>
+		<button id="reset" class= buttons onclick="resetGame()">Reset Game</button>
+      <div id="displaymessages" style="text-align: center wrap;">🙂</div>
+      <button id="tossButton" style="display: block; margin: 0 auto; background-color:F0F8FF;font-size:1.5em; ">Toss 🙃 </button>     
+<div id="result" style="resize: both; border: none; outline: none;"></div>
+      <table id="board" style="pointer-events: none;">
+        <tr>
+          <td data-cell=""></td>
+          <td data-cell=""></td>
+          <td data-cell=""></td>
+        </tr>
+        <tr>
+          <td data-cell=""></td>
+          <td data-cell=""></td>
+          <td data-cell=""></td>
+        </tr>
+        <tr>
+          <td data-cell=""></td>
+          <td data-cell=""></td>
+          <td data-cell=""></td>
+        </tr>
+      </table>
+    </div>
+<scipt>
+  <script src="{{ url_for('static', filename='scripts/game.js') }}"></script>
+</scipt>
+</body>
+</html>
