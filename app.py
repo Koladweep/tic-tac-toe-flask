@@ -9,4 +9,3 @@ def documentation():
 @app.route('/game',methods=['GET'])
 def game():
     return render_template('game.html')
-app.run()
